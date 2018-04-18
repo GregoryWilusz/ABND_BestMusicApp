@@ -9,7 +9,8 @@
     <!-- Details screen strings -->
 
 
-    <!-- Now playing screen strings -->
+    <!-- Songs screen strings -->
+    <string name="songs_screen">Search Music</string>
 
 
 </resources>
