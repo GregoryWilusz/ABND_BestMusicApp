@@ -6,11 +6,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
-
 
 public class AlbumsActivity extends AppCompatActivity {
-    @BindView(R.id.album_list) ListView albumListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +16,16 @@ public class AlbumsActivity extends AppCompatActivity {
 
         ArrayList<Album> albums = new ArrayList<Album>();
 
-        albums.add(new Album(1, "Michael Jackson", "Moon Walking", "blabla" ));
-        albums.add(new Album(2, "Michael Jackson", "Moon Walking", "blabla" ));
-        albums.add(new Album(3, "Michael Jackson", "Moon Walking", "blabla" ));
+        albums.add(new Album("Michael Jackson", "Moon Walking", "blabla",
+                new Song(1, "Milk", 3)));
+        albums.add(new Album("Michael Jacksons", "Moon Walkingd", "blablaa",
+                new Song(1, "Song 1", 4)));
+        albums.add(new Album("Michael Jacksonss", "Moon Walkings", "blablaaa",
+                new Song(1, "Song 1", 4)));
 
         AlbumAdapter adapter = new AlbumAdapter(this, albums);
 
+        ListView albumListView = (ListView) findViewById(R.id.album_list);
         albumListView.setAdapter(adapter);
 
     }

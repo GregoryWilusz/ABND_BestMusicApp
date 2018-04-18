@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 
 public class AlbumAdapter extends ArrayAdapter<Album> {
-    @BindView(R.id.artist_name_text_view) TextView artistNameTextView;
-    @BindView(R.id.album_name_text_view) TextView albumNameTextView;
+//    @BindView(R.id.artist_name_text_view) TextView artistNameTextView;
+//    @BindView(R.id.album_name_text_view) TextView albumNameTextView;
 
     public AlbumAdapter(@NonNull Context context, ArrayList<Album> albums) {
         super(context, 0, albums);
@@ -31,8 +31,13 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
         }
 
         Album currentAlbum = getItem(position);
-        artistNameTextView.setText(currentAlbum.getArtistName());
+
+        TextView albumNameTextView = (TextView) listItemView.findViewById(R.id.album_name_text_view);
         albumNameTextView.setText(currentAlbum.getAlbumName());
+
+        TextView artistNameTextView = (TextView) listItemView.findViewById(R.id.artist_name_text_view);
+        artistNameTextView.setText(currentAlbum.getArtistName());
+
 
         return listItemView;
     }
