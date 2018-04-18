@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    tools:context="com.example.android.bestmusicapp.MainActivity">
+
+    <TextView
+        android:id="@+id/albums"
+        style="@style/CategoryStyle"
+        android:text="@string/category_albums" />
+
+    <TextView
+        android:id="@+id/playlist"
+        style="@style/CategoryStyle"
+        android:text="@string/category_playlist" />
+
+    <TextView
+        android:id="@+id/now_playing"
+        style="@style/CategoryStyle"
+        android:text="@string/category_now_playing" />
+
+    <TextView
+        android:id="@+id/search"
+        style="@style/CategoryStyle"
+        android:text="@string/category_search" />
+
+
+</LinearLayout>

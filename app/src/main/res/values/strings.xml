@@ -1,0 +1,16 @@
+<resources>
+    <!-- Category strings -->
+    <string name="app_name">BestMusic App</string>
+    <string name="category_albums">Albums</string>
+    <string name="category_playlist">Your Playlist</string>
+    <string name="category_now_playing">Now Playing</string>
+    <string name="category_search">Search Music</string>
+
+    <!-- Details screen strings -->
+
+
+    <!-- Now playing screen strings -->
+
+
+
+</resources>
