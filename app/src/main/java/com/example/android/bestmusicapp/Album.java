@@ -7,13 +7,13 @@ public class Album {
     private String mArtistName;
     private String mAlbumName;
     private String mImage;
-    private ArrayList<Song> mSongs;
+//    private ArrayList<Song> mSongs;
 
-    public Album(String artistName, String albumName, String image, ArrayList<Song> songs) {
+    public Album(String artistName, String albumName, String image) {
         mArtistName = artistName;
         mAlbumName = albumName;
         mImage = image;
-        mSongs = songs;
+//        mSongs = songs;
     }
 
     public String getArtistName() {
@@ -28,9 +28,9 @@ public class Album {
         return mImage;
     }
 
-    public ArrayList<Song> getmSongs() {
-        return mSongs;
-    }
+//    public ArrayList<Song> getmSongs() {
+//        return mSongs;
+//    }
 
 
 }

@@ -9,6 +9,14 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/song_number_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/song_item_text_color"
+        android:textSize="@dimen/album_artist_text_size"
+        tools:text="Song Number" />
+
+    <TextView
         android:id="@+id/song_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
