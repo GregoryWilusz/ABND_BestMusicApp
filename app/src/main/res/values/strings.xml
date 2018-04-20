@@ -9,8 +9,9 @@
     <!-- Details screen strings -->
 
 
-    <!-- Songs screen strings -->
+    <!-- SongsList screen strings -->
     <string name="songs_screen">Search Music</string>
+    <string name="duration_time">Duration:</string>
 
 
 </resources>

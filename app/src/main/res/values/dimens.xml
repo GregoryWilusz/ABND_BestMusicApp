@@ -8,6 +8,10 @@
     <dimen name="album_item_height">80dp</dimen>
     <dimen name="album_title_text_size">20sp</dimen>
     <dimen name="album_artist_text_size">18sp</dimen>
+
+    <dimen name="song_track_no_text_size">20sp</dimen>
+    <dimen name="song_title_text_size">20sp</dimen>
+    <dimen name="song_duration_time_text_size">15sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

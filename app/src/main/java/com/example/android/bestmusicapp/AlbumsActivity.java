@@ -40,10 +40,10 @@ public class AlbumsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position==0) {
                     ArrayList<Song> songs = new ArrayList<Song>();
-                    songs.add(new Song(1, "Milk", "3"));
-                    songs.add(new Song(1, "Milk", "3"));
-                    songs.add(new Song(1, "Milk", "3"));
-                    songs.add(new Song(1, "Milk", "3"));
+                    songs.add(new Song("01", "My World", "3:40"));
+                    songs.add(new Song("02", "Best Wishes", "2:57"));
+                    songs.add(new Song("03", "Me and you", "1:25"));
+                    songs.add(new Song("04", "Call me then", "4:01"));
 
                     Intent album1Intent = new Intent(AlbumsActivity.this, SongsActivity.class);
                     album1Intent.putParcelableArrayListExtra("songs", songs);

@@ -1,36 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/album_item_height"
-    android:paddingLeft="@dimen/category_item_padding"
     android:background="@color/colorPrimaryDark"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:padding="@dimen/category_item_padding">
+
+    <ImageView
+        android:id="@+id/song_symbol"
+        android:src="@drawable/musical_note_standalone"
+        android:paddingRight="16dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/song_number_text_view"
-        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/song_symbol"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/song_item_text_color"
-        android:textSize="@dimen/album_artist_text_size"
+        android:textSize="@dimen/song_track_no_text_size"
         tools:text="Song Number" />
 
     <TextView
         android:id="@+id/song_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/song_number_text_view"
         android:textColor="@color/song_item_text_color"
+        android:textSize="@dimen/song_title_text_size"
         android:textStyle="bold"
-        android:textSize="@dimen/album_title_text_size"
         tools:text="Song Name" />
 
     <TextView
         android:id="@+id/song_duration_text_view"
+        android:layout_toRightOf="@id/song_symbol"
+        android:layout_below="@+id/song_number_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/duration_time"
+        android:textColor="@color/song_item_text_color"
+        android:textSize="@dimen/song_duration_time_text_size" />
+
+    <TextView
+        android:id="@+id/song_duration_time_text_view"
+        android:layout_below="@+id/song_number_text_view"
+        android:layout_toRightOf="@+id/song_duration_text_view"
+        android:paddingLeft="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/song_item_text_color"
-        android:textSize="@dimen/album_artist_text_size"
+        android:textSize="@dimen/song_duration_time_text_size"
         tools:text="Song Duration" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/play_the_song"
+        android:src="@drawable/play_button_yellow"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

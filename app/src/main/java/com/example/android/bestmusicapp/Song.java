@@ -5,18 +5,18 @@ import android.os.Parcelable;
 
 public class Song implements Parcelable {
 
-    private int mNumber;
+    private String mTrackNumber;
     private String mSongName;
     private String mDuration;
 
-    public Song(int number, String songName, String duration) {
-        mNumber = number;
+    public Song(String number, String songName, String duration) {
+        mTrackNumber = number;
         mSongName = songName;
         mDuration = duration;
     }
 
-    public int getNumber() {
-        return mNumber;
+    public String getNumber() {
+        return mTrackNumber;
     }
 
     public String getSongName() {
@@ -32,7 +32,7 @@ public class Song implements Parcelable {
         String[] data = new String[3];
 
         in.readStringArray(data);
-        this.mNumber = Integer.parseInt(data[0]);
+        this.mTrackNumber = data[0];
         this.mSongName = data[1];
         this.mDuration =  data[2];
     }
@@ -44,7 +44,7 @@ public class Song implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeStringArray(new String[]{String.valueOf(this.mNumber), this.mSongName, this.mDuration});
+        dest.writeStringArray(new String[]{this.mTrackNumber, this.mSongName, this.mDuration});
     }
 
     public static final Parcelable.Creator<Song> CREATOR = new Parcelable.Creator<Song>() {
