@@ -24,7 +24,7 @@ public class AlbumsActivity extends AppCompatActivity {
         setContentView(R.layout.albums_list);
         ButterKnife.bind(this);
 
-        ArrayList<Album> albums = new ArrayList<Album>();
+        final ArrayList<Album> albums = new ArrayList<Album>();
 
         albums.add(new Album("Michael Jackson", "Moon Walking", "blabla"));
         albums.add(new Album("Michael Jackson", "Moon", "blablaa"));
@@ -47,7 +47,8 @@ public class AlbumsActivity extends AppCompatActivity {
 
                     Intent album1Intent = new Intent(AlbumsActivity.this, SongsActivity.class);
                     album1Intent.putParcelableArrayListExtra("songs", songs);
-                    Log.i("Song in Albums", "Song: " + songs);
+                    album1Intent.putExtra("album", albums.get(0));
+                    Log.i("Chosen album data", "Album: " + albums.get(0));
                     startActivity(album1Intent);
                 }
 //                if (position==1) {
