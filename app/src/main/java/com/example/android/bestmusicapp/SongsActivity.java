@@ -17,10 +17,14 @@ import butterknife.ButterKnife;
 
 public class SongsActivity extends AppCompatActivity {
 
-    @BindView(R.id.songs_list) ListView songListView;
-    @BindView(R.id.navigate_back) Button backButton;
-    @BindView(R.id.song_list_header_album_title_text_view) TextView albumTitle;
-    @BindView(R.id.song_list_header_album_artist_text_view) TextView artistName;
+    @BindView(R.id.songs_list)
+    ListView songListView;
+    @BindView(R.id.navigate_back)
+    Button backButton;
+    @BindView(R.id.song_list_header_album_title_text_view)
+    TextView albumTitle;
+    @BindView(R.id.song_list_header_album_artist_text_view)
+    TextView artistName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +43,11 @@ public class SongsActivity extends AppCompatActivity {
         songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                for (int i = 0; i <= position; i++) {
-                    Intent playTheSongIntent = new Intent(SongsActivity.this, PlaylistActivity.class);
-                    playTheSongIntent.putExtra("song", songsList.get(i));
-                    playTheSongIntent.putExtra("album", chosenAlbum);
-                    startActivity(playTheSongIntent);
-                }
+                Intent playTheSongIntent = new Intent(SongsActivity.this, PlaylistActivity.class);
+                playTheSongIntent.putExtra("song", songsList.get(position));
+                playTheSongIntent.putExtra("album", chosenAlbum);
+                startActivity(playTheSongIntent);
+
             }
         });
 
