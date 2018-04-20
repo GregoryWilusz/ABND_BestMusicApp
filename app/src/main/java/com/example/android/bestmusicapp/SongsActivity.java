@@ -1,7 +1,9 @@
 package com.example.android.bestmusicapp;
 
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -23,4 +25,11 @@ public class SongsActivity extends AppCompatActivity {
         SongAdapter adapter = new SongAdapter(this, songsList);
         songListView.setAdapter(adapter);
     }
+
+    private View.OnClickListener myOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            NavUtils.navigateUpFromSameTask(SongsActivity.this);
+        }
+    };
 }
