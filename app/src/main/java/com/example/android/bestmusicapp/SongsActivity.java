@@ -1,10 +1,11 @@
 package com.example.android.bestmusicapp;
 
+import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,15 +28,26 @@ public class SongsActivity extends AppCompatActivity {
         setContentView(R.layout.songs_list);
         ButterKnife.bind(this);
 
-        Album chosenAlbum = getIntent().getParcelableExtra("album");
+        final Album chosenAlbum = getIntent().getParcelableExtra("album");
         albumTitle.setText(chosenAlbum.getAlbumName());
         artistName.setText(chosenAlbum.getArtistName());
 
-        ArrayList<Song> songsList = getIntent().getParcelableArrayListExtra("songs");
+        final ArrayList<Song> songsList = getIntent().getParcelableArrayListExtra("songs");
         SongAdapter adapter = new SongAdapter(this, songsList);
         songListView.setAdapter(adapter);
 
-        backButton.setOnClickListener(myOnClickListener);
+        songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                for (int i = 0; i <= position; i++) {
+                    Intent playTheSongIntent = new Intent(SongsActivity.this, PlaylistActivity.class);
+                    playTheSongIntent.putExtra("song", songsList.get(i));
+                    playTheSongIntent.putExtra("album", chosenAlbum);
+                    startActivity(playTheSongIntent);
+                }
+            }
+        });
+
     }
 
     private View.OnClickListener myOnClickListener = new View.OnClickListener() {

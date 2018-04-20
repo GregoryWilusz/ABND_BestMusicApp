@@ -64,7 +64,6 @@
         android:src="@drawable/play_button_yellow"
         android:layout_width="45dp"
         android:layout_height="45dp"
-
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
