@@ -4,6 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="app_background">#429961</color>
-    <color name="category_color">#114b86</color>
     <color name="song_item_text_color">#ffffff</color>
 </resources>

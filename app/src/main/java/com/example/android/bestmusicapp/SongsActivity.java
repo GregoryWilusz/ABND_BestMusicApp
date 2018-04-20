@@ -28,7 +28,6 @@ public class SongsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Album chosenAlbum = getIntent().getParcelableExtra("album");
-        Log.i("Chosen album data", "Album: " + chosenAlbum);
         albumTitle.setText(chosenAlbum.getAlbumName());
         artistName.setText(chosenAlbum.getArtistName());
 

@@ -48,7 +48,6 @@ public class AlbumsActivity extends AppCompatActivity {
                     Intent album1Intent = new Intent(AlbumsActivity.this, SongsActivity.class);
                     album1Intent.putParcelableArrayListExtra("songs", songs);
                     album1Intent.putExtra("album", albums.get(0));
-                    Log.i("Chosen album data", "Album: " + albums.get(0));
                     startActivity(album1Intent);
                 }
 //                if (position==1) {

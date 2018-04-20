@@ -13,6 +13,7 @@
     <string name="songs_screen">Search Music</string>
     <string name="duration_time">Duration:</string>
     <string name="back_button">Back</string>
+    <string name="albums_header_text">Choose the album: </string>
 
 
 </resources>
