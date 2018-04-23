@@ -32,7 +32,8 @@
 
     <Button
         android:id="@+id/navigate_back"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/button_background"
+        android:gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/song_item_text_color"

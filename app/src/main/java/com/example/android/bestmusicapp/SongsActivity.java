@@ -35,7 +35,6 @@ public class SongsActivity extends AppCompatActivity {
         final ArrayList<Song> songsList = getIntent().getParcelableArrayListExtra("songs");
         SongAdapter adapter = new SongAdapter(this, songsList);
         songListView.setAdapter(adapter);
-
         songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
