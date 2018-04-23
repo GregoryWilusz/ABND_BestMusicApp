@@ -18,13 +18,29 @@
         </activity>
         <activity
             android:name=".AlbumsActivity"
-            android:label="@string/category_albums" />
+            android:label="@string/category_albums"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name=".MainActivity"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".SongsActivity"
-            android:label="@string/songs_screen" />
+            android:label="@string/songs_screen"
+            android:launchMode="singleTop"
+            android:parentActivityName=".AlbumsActivity">
+            <meta-data
+                android:name=".AlbumsActivity"
+                android:value=".AlbumsActivity" />
+        </activity>
         <activity
             android:name=".NowPlayingActivity"
-            android:label="@string/category_now_playing" />
+            android:label="@string/category_now_playing"
+            android:parentActivityName=".SongsActivity">
+            <meta-data
+                android:name=".SongsActivity"
+                android:value=".SongsActivity" />
+        </activity>
     </application>
 
 </manifest>

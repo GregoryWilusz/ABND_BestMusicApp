@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
     android:orientation="vertical"
     tools:context=".AlbumsActivity">
 
     <RelativeLayout
         android:id="@+id/song_list_header"
-        style="@style/HeaderRelativeLayoutStyle" >
+        style="@style/HeaderRelativeLayoutStyle">
 
         <TextView
             android:id="@+id/album_list_header"
             style="@style/HeaderTextStyle"
-            android:textSize="@dimen/album_title_text_size"
-            android:text="@string/albums_header_text" />
+            android:text="@string/albums_header_text"
+            android:textSize="@dimen/album_title_text_size" />
 
     </RelativeLayout>
 
@@ -23,12 +24,20 @@
         android:id="@+id/albums_list"
         style="@style/ListViewStyle" />
 
-    <Button
-        android:id="@+id/navigate_back"
-        android:background="@color/colorPrimaryDark"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/song_item_text_color"
-        android:text="@string/back_button"/>
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/navigate_back_to_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/button_background"
+            android:text="@string/back_button"
+            android:textColor="@color/song_item_text_color"
+            tools:text="Back" />
+    </RelativeLayout>
 
 </LinearLayout>

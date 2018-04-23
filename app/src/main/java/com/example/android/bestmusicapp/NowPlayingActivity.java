@@ -2,8 +2,10 @@ package com.example.android.bestmusicapp;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class NowPlayingActivity extends AppCompatActivity {
     @BindView(R.id.now_playing_album_title_text_view) TextView albumTitle;
     @BindView(R.id.play_pause_image_view) ImageView playPauseIconView;
     @BindView(R.id.album_image_large) ImageView albumImageLarge;
+    @BindView(R.id.navigate_back_to_songs_list) Button navigateToSongs;
 
     private Boolean displayPlayIcon = true;
 
@@ -48,7 +51,6 @@ public class NowPlayingActivity extends AppCompatActivity {
         playPauseIconView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("displayPlayIcon: " + displayPlayIcon)   ;
                 displayPlayIcon = !displayPlayIcon;
 
                 if (displayPlayIcon) {
@@ -58,5 +60,14 @@ public class NowPlayingActivity extends AppCompatActivity {
                 }
             }
         });
+
+        navigateToSongs.setOnClickListener(myOnClickListener);
     }
+
+    private View.OnClickListener myOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            NavUtils.navigateUpFromSameTask(NowPlayingActivity.this);
+        }
+    };
 }

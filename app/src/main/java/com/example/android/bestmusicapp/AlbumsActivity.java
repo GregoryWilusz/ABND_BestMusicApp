@@ -2,9 +2,11 @@ package com.example.android.bestmusicapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,6 +18,7 @@ import butterknife.ButterKnife;
 public class AlbumsActivity extends AppCompatActivity {
 
     @BindView(R.id.albums_list) ListView albumListView;
+    @BindView(R.id.navigate_back_to_main_menu) Button navigateToMainMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +90,13 @@ public class AlbumsActivity extends AppCompatActivity {
 
             }
         });
-
+        navigateToMainMenu.setOnClickListener(myOnClickListener);
     }
+
+    private View.OnClickListener myOnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            NavUtils.navigateUpFromSameTask(AlbumsActivity.this);
+        }
+    };
 }

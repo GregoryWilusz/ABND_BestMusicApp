@@ -44,7 +44,6 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
         }
 
         Album currentAlbum = getItem(position);
-
         holder.albumNameTextView.setText(currentAlbum.getAlbumName());
         holder.artistNameTextView.setText(currentAlbum.getArtistName());
         holder.albumImageSmall.setImageResource(currentAlbum.getImageResourceId());

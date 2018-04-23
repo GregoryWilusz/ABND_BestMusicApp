@@ -21,22 +21,31 @@
             android:id="@+id/song_list_header_album_artist_text_view"
             android:layout_below="@+id/song_list_header_album_title_text_view"
             style="@style/HeaderTextStyle"
-            android:paddingBottom="@dimen/app_standard_padding"
             android:textSize="@dimen/album_artist_text_size" />
 
     </RelativeLayout>
 
     <ListView
         android:id="@+id/songs_list"
-        style="@style/ListViewStyle" />
+        style="@style/ListViewStyle"
+        android:layout_weight="0.18"/>
 
-    <Button
-        android:id="@+id/navigate_back"
-        android:background="@color/button_background"
-        android:gravity="bottom"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/song_item_text_color"
-        android:text="@string/back_button"/>
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/navigate_back_to_albums_list"
+            android:background="@color/button_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/song_item_text_color"
+            android:text="@string/back_button"
+            tools:text="Back" />
+    </RelativeLayout>
 
 </LinearLayout>

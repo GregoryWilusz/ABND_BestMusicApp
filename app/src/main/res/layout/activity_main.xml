@@ -12,10 +12,4 @@
         style="@style/CategoryStyle"
         android:text="@string/category_albums" />
 
-    <TextView
-        android:id="@+id/now_playing"
-        style="@style/CategoryStyle"
-        android:text="@string/category_now_playing" />
-
-
 </LinearLayout>

@@ -12,7 +12,6 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.albums) TextView albums_category;
-    @BindView(R.id.now_playing) TextView now_playing_category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +27,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(albumsIntent);
             }
         });
-
-        now_playing_category.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nowPlayingIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
-
-                startActivity(nowPlayingIntent);
-            }
-        });
-
     }
 
 

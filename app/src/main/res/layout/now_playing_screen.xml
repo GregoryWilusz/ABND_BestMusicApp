@@ -8,13 +8,13 @@
 
     <RelativeLayout
         android:id="@+id/now_playing_header"
-        style="@style/HeaderRelativeLayoutStyle" >
+        style="@style/HeaderRelativeLayoutStyle">
 
         <TextView
             android:id="@+id/now_playing_header_text"
             style="@style/HeaderTextStyle"
-            android:textSize="@dimen/album_title_text_size"
-            android:text="@string/now_playing_header_text" />
+            android:text="@string/now_playing_header_text"
+            android:textSize="@dimen/album_title_text_size" />
 
     </RelativeLayout>
 
@@ -159,6 +159,23 @@
 
         </LinearLayout>
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_content_section"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/navigate_back_to_songs_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/button_background"
+            android:text="@string/back_button"
+            android:textColor="@color/song_item_text_color"
+            tools:text="Back" />
     </RelativeLayout>
 
 </RelativeLayout>
