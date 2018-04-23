@@ -10,10 +10,8 @@
 
     <ImageView
         android:id="@+id/album_image"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:padding="16dp"
-        android:background="@color/colorAccent"
+        android:layout_width="@dimen/album_icon_dimension"
+        android:layout_height="@dimen/album_icon_dimension"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
@@ -21,8 +19,8 @@
 
     <TextView
         android:id="@+id/album_name_text_view"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
+        android:paddingLeft="@dimen/app_standard_padding"
+        android:paddingTop="@dimen/app_standard_padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/album_image"
@@ -34,7 +32,7 @@
 
     <TextView
         android:id="@+id/artist_name_text_view"
-        android:paddingLeft="16dp"
+        android:paddingLeft="@dimen/app_standard_padding"
         android:layout_toRightOf="@+id/album_image"
         android:layout_below="@+id/album_name_text_view"
         android:layout_width="match_parent"
@@ -46,9 +44,9 @@
     <ImageView
         android:id="@+id/go_to_songs"
         android:src="@drawable/play_arrow"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:paddingRight="16dp"
+        android:layout_width="@dimen/player_icon_dimension"
+        android:layout_height="@dimen/player_icon_dimension"
+        android:paddingRight="@dimen/app_standard_padding"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"

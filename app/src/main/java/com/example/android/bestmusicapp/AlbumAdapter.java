@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
     static class ViewHolder {
         @BindView(R.id.artist_name_text_view) TextView artistNameTextView;
         @BindView(R.id.album_name_text_view) TextView albumNameTextView;
+        @BindView(R.id.album_image) ImageView albumImageSmall;
 
         public ViewHolder(View view) {
             ButterKnife.bind(this, view);
@@ -46,6 +47,7 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
 
         holder.albumNameTextView.setText(currentAlbum.getAlbumName());
         holder.artistNameTextView.setText(currentAlbum.getArtistName());
+        holder.albumImageSmall.setImageResource(currentAlbum.getImageResourceId());
 
         return convertView;
     }

@@ -17,14 +17,10 @@ import butterknife.ButterKnife;
 
 public class SongsActivity extends AppCompatActivity {
 
-    @BindView(R.id.songs_list)
-    ListView songListView;
-    @BindView(R.id.navigate_back)
-    Button backButton;
-    @BindView(R.id.song_list_header_album_title_text_view)
-    TextView albumTitle;
-    @BindView(R.id.song_list_header_album_artist_text_view)
-    TextView artistName;
+    @BindView(R.id.songs_list) ListView songListView;
+    @BindView(R.id.song_list_header_album_title_text_view) TextView albumTitle;
+    @BindView(R.id.song_list_header_album_artist_text_view) TextView artistName;
+    @BindView(R.id.navigate_back) Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

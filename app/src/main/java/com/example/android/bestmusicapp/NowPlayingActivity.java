@@ -13,20 +13,15 @@ import butterknife.ButterKnife;
 
 public class NowPlayingActivity extends AppCompatActivity {
 
-    @BindView(R.id.player_song_no_text_view)
-    TextView songNo;
+    @BindDrawable(R.drawable.play_arrow) Drawable playIcon;
+    @BindDrawable(R.drawable.pause) Drawable pauseIcon;
+    @BindView(R.id.player_song_no_text_view) TextView songNo;
     @BindView(R.id.player_song_title_text_view) TextView songTitle;
     @BindView(R.id.player_duration_time) TextView durationTime;
     @BindView(R.id.now_playing_artist_name_text_view) TextView artistName;
     @BindView(R.id.now_playing_album_title_text_view) TextView albumTitle;
-//    @BindView(R.id.album_image_large) TextView imgView;
-
-    @BindDrawable(R.drawable.play_arrow)
-    Drawable playIcon;
-    @BindDrawable(R.drawable.pause)
-    Drawable pauseIcon;
-    @BindView(R.id.play_pause_image_view)
-    ImageView playPauseIconView;
+    @BindView(R.id.play_pause_image_view) ImageView playPauseIconView;
+    @BindView(R.id.album_image_large) ImageView albumImageLarge;
 
     private Boolean displayPlayIcon = true;
 
@@ -43,7 +38,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         if ((chosenSong != null) && (currentAlbum != null)) {
             artistName.setText(currentAlbum.getArtistName());
             albumTitle.setText(currentAlbum.getAlbumName());
-//        imgView.setText(currentAlbum.getImage());
+            albumImageLarge.setImageResource(currentAlbum.getImageResourceId());
 
             songNo.setText(chosenSong.getNumber());
             songTitle.setText(chosenSong.getSongName());
