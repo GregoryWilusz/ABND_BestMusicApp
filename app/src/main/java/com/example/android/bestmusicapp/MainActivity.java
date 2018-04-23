@@ -12,9 +12,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.albums) TextView albums_category;
-    @BindView(R.id.playlist) TextView playlist_category;
     @BindView(R.id.now_playing) TextView now_playing_category;
-    @BindView(R.id.search) TextView search_category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,30 +29,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        playlist_category.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
-
-                startActivity(playlistIntent);
-            }
-        });
-
         now_playing_category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent nowPlayingIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
 
                 startActivity(nowPlayingIntent);
-            }
-        });
-
-        search_category.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
-
-                startActivity(searchIntent);
             }
         });
 

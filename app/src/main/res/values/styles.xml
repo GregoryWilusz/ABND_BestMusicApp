@@ -8,6 +8,48 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- ListView theme. -->
+    <style name="ListViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginBottom">@dimen/list_view_margin</item>
+        <item name="android:layout_marginTop">@dimen/list_view_margin</item>
+    </style>
+
+    <!-- Header RelativeLayout theme. -->
+    <style name="HeaderRelativeLayoutStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/header_height</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Header Text theme. -->
+    <style name="HeaderTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/song_item_text_color</item>
+    </style>
+
+    <!-- Player theme. -->
+    <style name="PlayerInfoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/song_item_text_color</item>
+        <item name="android:textSize">@dimen/album_title_text_size</item>
+    </style>
+
+    <!-- Player icon theme. -->
+    <style name="PlayerIconStyle">
+        <item name="android:layout_width">@dimen/player_icon_dimension</item>
+        <item name="android:layout_height">@dimen/player_icon_dimension</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
     <!-- Category item theme. -->
     <style name="CategoryStyle">
         <item name="android:layout_width">match_parent</item>

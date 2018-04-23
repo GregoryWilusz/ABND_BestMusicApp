@@ -3,7 +3,6 @@ package com.example.android.bestmusicapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -29,7 +28,6 @@ public class AlbumsActivity extends AppCompatActivity {
         albums.add(new Album("Michael Jackson", "Moon Walking", "blabla"));
         albums.add(new Album("Michael Jackson", "Moon", "blablaa"));
         albums.add(new Album("Michael Jackson", "Thriller", "blablaaa"));
-        Log.i("Albums in Albums", "Albums: " + albums);
 
         AlbumAdapter adapter = new AlbumAdapter(this, albums);
         albumListView.setAdapter(adapter);

@@ -1,20 +1,21 @@
 <resources>
-    <!-- Category strings -->
+    <!-- Category/screen strings -->
     <string name="app_name">BestMusic App</string>
     <string name="category_albums">Albums</string>
-    <string name="category_playlist">Your Playlist</string>
     <string name="category_now_playing">Now Playing</string>
-    <string name="category_search">Search Music</string>
+    <string name="songs_screen">Songs</string>
+    <string name="player_screen">Player</string>
 
-    <!-- Details screen strings -->
-
-
-    <!-- SongsList screen strings -->
-    <string name="songs_screen">Search Music</string>
-    <string name="duration_time">Duration:</string>
-    <string name="back_button">Back</string>
-    <string name="albums_header_text">Choose the album: </string>
+    <!-- Now Playing screen strings -->
     <string name="now_playing_header_text">You are currently listening to: </string>
+
+
+    <!-- Albums & Songs List screens strings -->
+    <string name="duration_time">Duration:</string>
+    <string name="albums_header_text">Choose the album: </string>
+
+
+    <string name="back_button">Back</string>
 
 
 </resources>

@@ -2,38 +2,25 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AlbumsActivity">
 
     <RelativeLayout
         android:id="@+id/song_list_header"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/header_height"
-        android:background="@color/colorPrimaryDark"
-        android:orientation="vertical">
+        style="@style/HeaderRelativeLayoutStyle" >
 
         <TextView
             android:id="@+id/album_list_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:text="@string/albums_header_text"
-            android:paddingTop="16dp"
-            android:textAlignment="center"
-            android:textColor="@color/song_item_text_color"
-            android:textSize="@dimen/album_title_text_size" />
+            style="@style/HeaderTextStyle"
+            android:textSize="@dimen/album_title_text_size"
+            android:text="@string/albums_header_text" />
 
     </RelativeLayout>
 
     <ListView
         android:id="@+id/albums_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/list_view_margin"
-        android:layout_marginTop="@dimen/list_view_margin"
-        android:gravity="center_vertical"
-        android:orientation="vertical" />
+        style="@style/ListViewStyle" />
 
 </LinearLayout>

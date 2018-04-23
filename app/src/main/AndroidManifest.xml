@@ -20,18 +20,11 @@
             android:name=".AlbumsActivity"
             android:label="@string/category_albums" />
         <activity
-            android:name=".PlaylistActivity"
-            android:label="@string/category_playlist"/>
-        <activity
             android:name=".SongsActivity"
             android:label="@string/songs_screen" />
         <activity
             android:name=".NowPlayingActivity"
             android:label="@string/category_now_playing" />
-        <activity
-            android:name=".SearchActivity"
-            android:label="@string/category_search" />
-
     </application>
 
 </manifest>

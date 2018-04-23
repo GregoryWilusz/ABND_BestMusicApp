@@ -43,11 +43,10 @@ public class SongsActivity extends AppCompatActivity {
         songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent playTheSongIntent = new Intent(SongsActivity.this, PlaylistActivity.class);
+                Intent playTheSongIntent = new Intent(SongsActivity.this, NowPlayingActivity.class);
                 playTheSongIntent.putExtra("song", songsList.get(position));
                 playTheSongIntent.putExtra("album", chosenAlbum);
                 startActivity(playTheSongIntent);
-
             }
         });
 
