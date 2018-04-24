@@ -27,9 +27,9 @@ public class AlbumsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         final ArrayList<Album> albums = new ArrayList<Album>();
-        albums.add(new Album("Forest E. Bayer", "Forest Bayer", R.drawable.bayer));
-        albums.add(new Album("Makoto Ozone", "Jungle", R.drawable.jungle));
-        albums.add(new Album("Acoustic Alchemy", "Reference Point", R.drawable.reference_point));
+        albums.add(new Album(getString(R.string.a0_artist), getString(R.string.a0_title), R.drawable.bayer));
+        albums.add(new Album(getString(R.string.a1_artist), getString(R.string.a1_title), R.drawable.jungle));
+        albums.add(new Album(getString(R.string.a2_artist), getString(R.string.a2_title), R.drawable.reference_point));
 
 
         final AlbumAdapter adapter = new AlbumAdapter(this, albums);
@@ -42,45 +42,45 @@ public class AlbumsActivity extends AppCompatActivity {
                 int positionClicked = 0;
 
                 if (position == 0) {
-                    songs.add(new Song("01", "Stuck in the Future : Introduction", "1:16"));
-                    songs.add(new Song("02", "Healing", "4:00"));
-                    songs.add(new Song("03", "Spirits in the Spirit Realm : Interlude I", "0:25"));
-                    songs.add(new Song("04", "Today", "3:38"));
-                    songs.add(new Song("05", "Libra", "3:19"));
-                    songs.add(new Song("06", "Bird Song : Interlude II", "1:40"));
-                    songs.add(new Song("07", "Defibrillator (Breathe Again)", "2:42"));
-                    songs.add(new Song("08", "2020", "4:53"));
-                    songs.add(new Song("09", "Glaciers", "3:53"));
-                    songs.add(new Song("10", "On the Moon : Interlude III", "4:01"));
-                    songs.add(new Song("11", "Imagination", "5:06"));
-                    songs.add(new Song("12", "Volcanoes", "4:44"));
-                    songs.add(new Song("13", "Zzzz.. (A Long Snooze)", "4:23"));
-                    songs.add(new Song("14", "To Be Continued... : Outro", "1:23"));
-                    songs.add(new Song("15", "Today (Instrumental)", "3:28"));
+                    songs.add(new Song(getString(R.string.a0s1_no), getString(R.string.a0s01_title), getString(R.string.a0s01_duration)));
+                    songs.add(new Song(getString(R.string.a0s2_no), getString(R.string.a0s02_title), getString(R.string.a0s02_duration)));
+                    songs.add(new Song(getString(R.string.a0s3_no), getString(R.string.a0s03_title), getString(R.string.a0s03_duration)));
+                    songs.add(new Song(getString(R.string.a0s4_no), getString(R.string.a0s04_title), getString(R.string.a0s04_duration)));
+                    songs.add(new Song(getString(R.string.a0s5_no), getString(R.string.a0s05_title), getString(R.string.a0s05_duration)));
+                    songs.add(new Song(getString(R.string.a0s6_no), getString(R.string.a0s06_title), getString(R.string.a0s06_duration)));
+                    songs.add(new Song(getString(R.string.a0s7_no), getString(R.string.a0s07_title), getString(R.string.a0s07_duration)));
+                    songs.add(new Song(getString(R.string.a0s8_no), getString(R.string.a0s08_title), getString(R.string.a0s08_duration)));
+                    songs.add(new Song(getString(R.string.a0s9_no), getString(R.string.a0s09_title), getString(R.string.a0s09_duration)));
+                    songs.add(new Song(getString(R.string.a0s10_no), getString(R.string.a0s10_title), getString(R.string.a0s10_duration)));
+                    songs.add(new Song(getString(R.string.a0s11_no), getString(R.string.a0s11_title), getString(R.string.a0s11_duration)));
+                    songs.add(new Song(getString(R.string.a0s12_no), getString(R.string.a0s12_title), getString(R.string.a0s12_duration)));
+                    songs.add(new Song(getString(R.string.a0s13_no), getString(R.string.a0s13_title), getString(R.string.a0s13_duration)));
+                    songs.add(new Song(getString(R.string.a0s14_no), getString(R.string.a0s14_title), getString(R.string.a0s14_duration)));
+                    songs.add(new Song(getString(R.string.a0s15_no), getString(R.string.a0s15_title), getString(R.string.a0s15_duration)));
                     positionClicked = position;
                 }
                 if (position == 1) {
-                    songs.add(new Song("01", "Jungle", "6:58"));
-                    songs.add(new Song("02", "Coconuts Meeting", "5:35"));
-                    songs.add(new Song("03", "No Siesta", "8:08"));
-                    songs.add(new Song("04", "Cave Walk", "7:51"));
-                    songs.add(new Song("05", "Safari", "6:31"));
-                    songs.add(new Song("06", "B&B", "7:31"));
-                    songs.add(new Song("07", "Moon Flower", "7:02"));
-                    songs.add(new Song("08", "La Verdad Con Los Caballos", "7:19"));
-                    songs.add(new Song("09", "Oasis", "6:02"));
+                    songs.add(new Song(getString(R.string.a1s1_no), getString(R.string.a1s1_title), getString(R.string.a1s1_duration)));
+                    songs.add(new Song(getString(R.string.a1s2_no), getString(R.string.a1s2_title), getString(R.string.a1s2_duration)));
+                    songs.add(new Song(getString(R.string.a1s3_no), getString(R.string.a1s3_title), getString(R.string.a1s3_duration)));
+                    songs.add(new Song(getString(R.string.a1s4_no), getString(R.string.a1s4_title), getString(R.string.a1s4_duration)));
+                    songs.add(new Song(getString(R.string.a1s5_no), getString(R.string.a1s5_title), getString(R.string.a1s5_duration)));
+                    songs.add(new Song(getString(R.string.a1s6_no), getString(R.string.a1s6_title), getString(R.string.a1s6_duration)));
+                    songs.add(new Song(getString(R.string.a1s7_no), getString(R.string.a1s7_title), getString(R.string.a1s7_duration)));
+                    songs.add(new Song(getString(R.string.a1s8_no), getString(R.string.a1s8_title), getString(R.string.a1s8_duration)));
+                    songs.add(new Song(getString(R.string.a1s9_no), getString(R.string.a1s9_title), getString(R.string.a1s9_duration)));
                     positionClicked = position;
                 }
                 if (position == 2) {
-                    songs.add(new Song("01", "Reference Point", "4:30"));
-                    songs.add(new Song("02", "Missing Your Touch", "4:32"));
-                    songs.add(new Song("03", "Take Five", "4:38"));
-                    songs.add(new Song("04", "Same Road, Same Reason", "4:53"));
-                    songs.add(new Song("05", "Make My Day", "4:09"));
-                    songs.add(new Song("06", "Caravan Of Dreams", "2:57"));
-                    songs.add(new Song("07", "Homecoming", "5:31"));
-                    songs.add(new Song("08", "Cuban Heels", "3:31"));
-                    songs.add(new Song("09", "Lullaby For The First Born", "3:35"));
+                    songs.add(new Song(getString(R.string.a2s1_no), getString(R.string.a2s1_title), getString(R.string.a2s1_duration)));
+                    songs.add(new Song(getString(R.string.a2s2_no), getString(R.string.a2s2_title), getString(R.string.a2s2_duration)));
+                    songs.add(new Song(getString(R.string.a2s3_no), getString(R.string.a2s3_title), getString(R.string.a2s3_duration)));
+                    songs.add(new Song(getString(R.string.a2s4_no), getString(R.string.a2s4_title), getString(R.string.a2s4_duration)));
+                    songs.add(new Song(getString(R.string.a2s5_no), getString(R.string.a2s5_title), getString(R.string.a2s5_duration)));
+                    songs.add(new Song(getString(R.string.a2s6_no), getString(R.string.a2s6_title), getString(R.string.a2s6_duration)));
+                    songs.add(new Song(getString(R.string.a2s7_no), getString(R.string.a2s7_title), getString(R.string.a2s7_duration)));
+                    songs.add(new Song(getString(R.string.a2s8_no), getString(R.string.a2s8_title), getString(R.string.a2s8_duration)));
+                    songs.add(new Song(getString(R.string.a2s9_no), getString(R.string.a2s9_title), getString(R.string.a2s9_duration)));
                     positionClicked = position;
                 }
                 Intent chosenAlbumIntent = new Intent(AlbumsActivity.this, SongsActivity.class);
